@@ -1,7 +1,6 @@
 package com.hopetech.util;
 
 import java.math.BigDecimal;
-import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Calendar;
 
@@ -23,11 +22,6 @@ public class SalaryUtil {
 			totalTax = totalTax.add(salaryInThisMonth(i, totalTax));
 			System.out.println("=================================");
 		}
-//		InetAddress addr = InetAddress.getLocalHost();  
-//        String ip=addr.getHostAddress().toString(); //获取本机ip  
-//        String hostName=addr.getHostName().toString(); //获取本机计算机名称  
-//        System.out.println(ip);
-//        System.out.println(hostName);
 	}
 	
 	/**
