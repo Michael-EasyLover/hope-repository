@@ -21,7 +21,7 @@ public class TestController {
 		System.out.println(redisConfig.getPort());
 		System.out.println(redisConfig.getTimeout());
 		System.out.println("===============================");
-		System.out.println("===============================");
+		System.out.println("+++++++++++++++++++++++++++++++");
 		System.out.println(r.getHost());
 		System.out.println(r.getPort());
 		System.out.println(r.getTimeout());
