@@ -1,5 +1,7 @@
 package com.hopetech.proriginal;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -10,6 +12,8 @@ import com.hopetech.config.RedisConfig;
 
 @RestController
 public class TestController {
+	private static Logger log = LoggerFactory.getLogger(TestController.class);
+	
 	@Autowired
 	private RedisConfig redisConfig;
 	@Autowired
@@ -25,6 +29,9 @@ public class TestController {
 		System.out.println(r.getHost());
 		System.out.println(r.getPort());
 		System.out.println(r.getTimeout());
+		
+		log.info("redisConfig.getHost()={}, redisConfig.getPort()={}, redisConfig.getTimeout()={}", redisConfig.getHost(), redisConfig.getPort(), redisConfig.getTimeout());
+		log.info("r.getHost()={}, r.getPort()={}, r.getTimeout()={}", r.getHost(), r.getPort(), r.getTimeout());
 		return "Controller is ok!";
 	}
 }
