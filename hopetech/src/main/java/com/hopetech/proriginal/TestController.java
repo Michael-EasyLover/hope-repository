@@ -21,15 +21,6 @@ public class TestController {
 
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public String handleRequest() {
-		System.out.println(redisConfig.getHost());
-		System.out.println(redisConfig.getPort());
-		System.out.println(redisConfig.getTimeout());
-		System.out.println("===============================");
-		System.out.println("+++++++++++++++++++++++++++++++");
-		System.out.println(r.getHost());
-		System.out.println(r.getPort());
-		System.out.println(r.getTimeout());
-		
 		log.info("redisConfig.getHost()={}, redisConfig.getPort()={}, redisConfig.getTimeout()={}", redisConfig.getHost(), redisConfig.getPort(), redisConfig.getTimeout());
 		log.info("r.getHost()={}, r.getPort()={}, r.getTimeout()={}", r.getHost(), r.getPort(), r.getTimeout());
 		return "Controller is ok!";
